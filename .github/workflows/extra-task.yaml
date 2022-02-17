@@ -1,9 +1,9 @@
-me: Extra-task
+name: Extra-task
 
 on: 
     push:
         branches:
-            - master
+            - main
 
 env:
     DEPLOY_VER: ${{ github.sha }}
@@ -25,8 +25,8 @@ jobs:
         - name: Print DEPLOY_VER
           run: echo "Hello from $DEPLOY_VER commit"
     
-    extra_:
-        needs: first_job
+    extra_job:
+        needs: extra_task
         runs-on: ubuntu-latest
         steps:
         - name: Print day of the month
