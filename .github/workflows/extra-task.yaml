@@ -1,0 +1,39 @@
+me: Extra-task
+
+on: 
+    push:
+        branches:
+            - master
+
+env:
+    DEPLOY_VER: ${{ github.sha }}
+    MONTH: "March"
+    DAY_OF_THE_MONTH: "1"
+    YEAR: 2022
+    FAVORITE_DAY_OF_WEEK: ${{ secrets.FAVORITE_DAY_OF_WEEK }}
+
+
+jobs:
+    extra_task:
+        runs-on: ubuntu-latest
+        steps:
+        - uses: actions/checkout@v2
+        - name: Print entity of repo
+          run: ls
+        - name: Print entity of log.txt
+          run: cat log.txt
+        - name: Print DEPLOY_VER
+          run: echo "Hello from $DEPLOY_VER commit"
+    
+    extra_:
+        needs: first_job
+        runs-on: ubuntu-latest
+        steps:
+        - name: Print day of the month
+          run: echo $DAY_OF_THE_MONTH
+        - name: Print system date and time
+          run: date
+        - name: Print Day Month Year and Favorite day of week
+          run: echo -e "Day - $DAY_OF_THE_MONTH\nMonth - $MONTH\nYaer - $YEAR" && echo "My favorite day of week is $FAVORITE_DAY_OF_WEEK"
+        - name: Reason why we get ***
+          run: echo "Secrets are encrypted."
