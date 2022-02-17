@@ -1,0 +1,35 @@
+commit 90897277b946c28af72657ecec5914e880ecf2f9
+Merge: f0a53a7 8a11997
+Author: illus10n <jamshidyerzakov@gmail.com>
+Date:   Thu Feb 17 15:36:45 2022 +0400
+
+    Merge pull request #2 from jamshidyerzakov/dev
+    
+    Dev
+
+commit 8a11997f92033d6e0116c8f1b5dfc1947d1e491d
+Merge: c8a5983 59d7fd7
+Author: illus10n <jamshidyerzakov@gmail.com>
+Date:   Thu Feb 17 15:29:56 2022 +0400
+
+    Merge pull request #1 from jamshidyerzakov/jamshid-new_feature
+    
+    [add]:gitignore
+
+commit 59d7fd7b6e877e91c78f4e864aecd287b49878db
+Author: Jamshid Yerzakov <jamshidyerzakov@gmail.com>
+Date:   Thu Feb 17 16:26:57 2022 +0500
+
+    [add]:gitignore
+
+commit c8a59837255c383de9d549f34231f4d67a8fa2a4
+Author: Jamshid Yerzakov <jamshidyerzakov@gmail.com>
+Date:   Thu Feb 17 16:15:24 2022 +0500
+
+    [add]: test file
+
+commit f0a53a7a5fc96c4fb37b72f814e46e0f3469ded1
+Author: Jamshid Yerzakov <jamshidyerzakov@gmail.com>
+Date:   Thu Feb 17 16:14:43 2022 +0500
+
+    [add]: Task1 readme
