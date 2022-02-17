@@ -21,7 +21,7 @@ jobs:
         - name: Print entity of repo
           run: ls
         - name: Print entity of log.txt
-          run: cat log.txt
+          run: cat Task1/log.txt
         - name: Print DEPLOY_VER
           run: echo "Hello from $DEPLOY_VER commit"
     
