@@ -13,5 +13,5 @@
 ### Run remote script to install nginx and generate pages
 
 ```bash
-$ ssh $SUDOER@$PUBLIC_IP "bash -s" -- < ./script.sh
+$ ssh -i $PRIVATE_KEY $SUDOER@$PUBLIC_IP "bash -s" -- < ./script.sh
 ```

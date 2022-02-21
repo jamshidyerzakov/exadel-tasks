@@ -8,7 +8,7 @@ PROCESS_INFO=$(ps aux)
 
 
 function install_nginx() {
-        sudo apt install nginx
+        sudo apt install nginx -y
         sudo chown -R ubuntu:ubuntu /var/www/html/
 }
 
