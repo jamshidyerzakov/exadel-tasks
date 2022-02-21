@@ -9,7 +9,7 @@ PROCESS_INFO=$(ps aux)
 
 function install_nginx() {
         sudo apt install nginx -y
-        sudo chown -R ubuntu:ubuntu /var/www/html/
+        sudo chown -R $USER:$USER /var/www/html/
 }
 
 function create_info_page() {
