@@ -6,6 +6,8 @@ on:
                 - main
 
 env:
+    DOCKER_USER: ${{ secrets.DOCKER_HUB_USERNAME }}
+    DOCKER_PASS: ${{ secrets.DOCKER_HUB_PASSWORD }}
     USER: "jamshidyerzakov"
     PROJECT: "task4"
 
@@ -15,7 +17,7 @@ jobs:
         steps:
         - uses: actions/checkout@v2
         - name: Docker login
-          run: docker login --username ${{ secrets.DOCKER_HUB_USERNAME }} --password ${{ secrets.DOCKER_HUB_PASSWORD }}
+          run: docker login --username $DOCKER_USER --password $DOCKER_PASS
         - name: Build the Docker image
           run: docker build -t $USER/$PROJECT:latest ./task_4/.
         - name: Push Docker image to dockerhub
