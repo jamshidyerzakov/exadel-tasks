@@ -3,7 +3,7 @@ name: Exadel-Task-Four
 on:
     push:
         branches:
-                - master
+                - main
 
 env:
     USER: "jamshidyerzakov"
