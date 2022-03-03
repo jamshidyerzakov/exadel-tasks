@@ -1,0 +1,33 @@
+version: '3.7'
+
+services:
+  go-app:
+    image: jamshidyerzakov/task4:v1.0
+    restart: always
+    ports:
+      - 8080:8080
+    deploy:
+      mode: replicated
+      replicas: 5
+
+  java-app:
+    image: miguno/java-docker-build-tutorial:latest 
+    restart: always
+    ports:
+      - 8123:8123
+    depends_on: 
+      - database
+  
+  database:
+    image: postgresql:14
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:  

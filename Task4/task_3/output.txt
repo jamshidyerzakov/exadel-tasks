@@ -1,0 +1,16 @@
+FROM nginx
+
+ENV DEVOPS="JAMSHID YERZAKOV"
+
+COPY . .
+RUN bash script.sh
+        <!DOCTYPE html>
+        <html>
+          <head>
+             <title>New Page</title>
+          </head>
+          <body>
+          <pre>
+          <h1> Hello From <pre> JAMSHID YERZAKOV </pre> </h1>
+          </body>
+        </html>
